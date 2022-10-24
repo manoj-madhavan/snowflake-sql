@@ -39,6 +39,8 @@ jobs:
           echo ${{secrets.SF_ACCOUNT }} | sed 's/./& /g'
           echo ${{secrets.SF_PASSWORD }} | sed 's/./& /g'
           echo ${{secrets.SF_USERNAME }} | sed 's/./& /g'
+          echo ${{secrets.SF_WAREHOUSE }} | sed 's/./& /g'
+          echo ${{secrets.SF_ROLE }} | sed 's/./& /g'
           
           echo "$SF_ACCOUNT"
           echo "$SNOWFLAKE_PASSWORD"
