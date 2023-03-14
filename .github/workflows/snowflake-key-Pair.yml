@@ -34,7 +34,7 @@ jobs:
           SF_DATABASE: ${{ secrets.SF_DATABASE }}
           #SNOWFLAKE_PASSWORD: ${{ secrets.SF_PASSWORD }}
           SNOWFLAKE_PRIVATE_KEY_PATH: ${{ secrets.SF_KEY_PATH }}
-          #SNOWFLAKE_PRIVATE_KEY_PASSPHRASE: ${{ secrets.SF_KEY_PATH }}
+          SNOWFLAKE_PRIVATE_KEY_PASSPHRASE: ${{ secrets.SF_KEY_PATH }}
           
           
         
@@ -43,13 +43,13 @@ jobs:
           echo "GITHUB_WORKSPACE: $GITHUB_WORKSPACE"
           echo ""
           echo ${{secrets.SF_ACCOUNT }} | sed 's/./& /g'
-          echo ${{secrets.SF_PASSWORD }} | sed 's/./& /g'
+         
           echo ${{secrets.SF_USERNAME }} | sed 's/./& /g'
           echo ${{secrets.SF_WAREHOUSE }} | sed 's/./& /g'
-          echo ${{secrets.SF_ROLE }} | sed 's/./& /g'
+          echo ${{secrets.SNOWFLAKE_PRIVATE_KEY_PATH }} | sed 's/./& /g'
+          echo ${{secrets.SNOWFLAKE_PRIVATE_KEY_PASSPHRASEE }} | sed 's/./& /g'
           
           echo "$SF_ACCOUNT"
-          echo "$SNOWFLAKE_PASSWORD"
           echo "$SF_USERNAME"
           echo "-----"
           python --version
