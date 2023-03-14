@@ -32,7 +32,7 @@ jobs:
           SF_ROLE: ${{ secrets.SF_ROLE }}
           SF_WAREHOUSE: ${{ secrets.SF_WAREHOUSE }}
           SF_DATABASE: ${{ secrets.SF_DATABASE }}
-          #SNOWFLAKE_PASSWORD: ${{ secrets.SF_PASSWORD }}
+        
           SNOWFLAKE_PRIVATE_KEY_PATH: ${{ secrets.SF_KEY_PATH }}
           SNOWFLAKE_PRIVATE_KEY_PASSPHRASE: ${{ secrets.SF_KEY_PATH }}
           
